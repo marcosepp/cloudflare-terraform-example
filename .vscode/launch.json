@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Terraform Version",
+            "type": "node-terminal",
+            "command": "terraform -version",
+            "request": "launch"
+        },
+        {
+            "name": "Terraform Init",
+            "type": "node-terminal",
+            "command": "terraform init",
+            "request": "launch"
+        },
+        {
+            "name": "Terraform Plan",
+            "type": "node-terminal",
+            "command": "terraform plan",
+            "request": "launch"
+        }
+    ]
+}

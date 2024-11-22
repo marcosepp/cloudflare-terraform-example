@@ -1,0 +1,9 @@
+# if using API Token
+export CLOUDFLARE_API_TOKEN=""
+
+# if using API Key
+#export CLOUDFLARE_EMAIL='user@example.com'
+#export CLOUDFLARE_API_KEY=""
+
+# specify zone ID
+#export CLOUDFLARE_ZONE_ID=""
