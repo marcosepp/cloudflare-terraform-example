@@ -1,5 +1,5 @@
 # You can pick any Debian/Ubuntu-based image. 😊
-FROM ubuntu:noble-20241015
+FROM ubuntu:26.04
 
 RUN apt update && apt install -y \
     gnupg \
@@ -20,13 +20,14 @@ RUN apt update && apt install -y \
     direnv \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://github.com/cloudflare/cf-terraforming/releases/download/v0.21.0/cf-terraforming_0.21.0_linux_amd64.tar.gz &&\
-    tar -xzf cf-terraforming_0.21.0_linux_amd64.tar.gz && \
+RUN wget https://github.com/cloudflare/cf-terraforming/releases/download/v0.27.0/cf-terraforming_0.27.0_linux_amd64.tar.gz &&\
+    tar -xzf cf-terraforming_0.27.0_linux_amd64.tar.gz && \
     mv cf-terraforming /usr/local/bin/cf-terraforming && \
-    rm cf-terraforming_0.21.0_linux_amd64.tar.gz && \
+    rm cf-terraforming_0.27.0_linux_amd64.tar.gz && \
     chmod +x /usr/local/bin/cf-terraforming
 
 # Set up direnv hook
 RUN echo 'eval "$(direnv hook bash)"' >> ~/.bashrc && \
     echo 'eval "$(direnv hook bash)"' >> ~/.bash_profile && \
+    cf-terraforming completion bash > /etc/bash_completion.d/cf-terraforming && \
     terraform -install-autocomplete

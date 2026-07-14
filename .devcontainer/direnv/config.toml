@@ -1,2 +1,2 @@
 [whitelist]
-prefix = [ "/workspaces/terraform_cloudflare" ]
+prefix = [ "/workspaces/cloudflare-terraform-example" ]

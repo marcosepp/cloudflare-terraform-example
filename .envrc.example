@@ -5,5 +5,8 @@ export CLOUDFLARE_API_TOKEN=""
 #export CLOUDFLARE_EMAIL='user@example.com'
 #export CLOUDFLARE_API_KEY=""
 
+# specify account ID
+export CLOUDFLARE_ACCOUNT_ID=""
+
 # specify zone ID
 #export CLOUDFLARE_ZONE_ID=""
